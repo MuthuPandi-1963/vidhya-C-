@@ -3,10 +3,11 @@
 
 int main(){
     int a = 10;
+    
     char ch ='A';
     char name[]="Hello";
     printf("%d , %c , %s \n",a,ch,name);
-    printf("%c",name[1]);
+    printf("%c",name[4]);
     bool isActive = true;
     
     int num[] = {10,11,12,13,14,15};
