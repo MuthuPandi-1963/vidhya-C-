@@ -17,7 +17,6 @@ class Employee{
         this->id = counter;
         counter++;
         cout << "Hello"<<endl;
-        
     }
     Employee(string name,string ad,int age,string dept){
         this->name = name;
