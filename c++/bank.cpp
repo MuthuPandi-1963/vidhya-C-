@@ -2,7 +2,6 @@
 using namespace std;
 class bank
 {
-
 public:
     static int counter;
     string name;
@@ -20,6 +19,7 @@ public:
     int account_no;
     bank(string name, string branch, string district, int age, string gender, string IFSC_code, float balance)
     {
+        cout<<"with parameters";
         counter++;
         this->account_no = counter;
         this->name = name;
@@ -32,12 +32,18 @@ public:
     bank()
     {
         counter++;
+        cout<<"without parameters";
         this->account_no = counter;
         this->balance = 0;
     }
 
 public:
     void checkbalance()
+    {
+        this->showdetails();
+        cout << "balance: " << balance << endl;
+    }
+    void checkbalance(int pin)
     {
         this->showdetails();
         cout << "balance: " << balance << endl;
@@ -175,7 +181,7 @@ int main()
         cin >> key;
         if (key == 1)
         {
-            bank b1;
+            bank b1; // object creation 
             b1 = b1.createaccount(b1);
             b1.recursion(b1);
             break;
