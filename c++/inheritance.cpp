@@ -23,6 +23,7 @@ class Account{
         cout<<"name : "<<this->name << endl;
         cout<<"email : "<<this->email << endl;
     }
+    
 };
 
 class NormalAccount  :public Account {
@@ -60,6 +61,8 @@ class AdminAccount : public Account {
 };
 int main(){
 
+    Account ac1;
+
     NormalAccount user1;
     user1.Register("ram","ram123@gmail.com","12345678");
     user1.showUserInfo();
@@ -76,3 +79,16 @@ int main(){
 
     return 0;
 }
+
+
+
+
+
+// parent class -> bank ->account details(properties ,balance) ->check bal , show account details,  
+// child -3
+// SA (deposit,withdrawal,create account) 5000,50000
+// CA (deposit,withdrawal,create account) 0,30000
+// VA (deposit,withdrawal,create account) 10000,2000000
+
+
+
