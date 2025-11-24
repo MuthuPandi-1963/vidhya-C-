@@ -229,12 +229,52 @@
 # print(marks["r"])
 
 
-map
-filter
-reversed
-sorted
+# map
+# filter
+# reversed
+# sorted
 
-list , dict = 0
-"comprehension"
+# list , dict = 0
+# "comprehension"
 
-"https://chatgpt.com/share/69171f72-a25c-800c-af23-60b8e247734c"
+# "https://chatgpt.com/share/69171f72-a25c-800c-af23-60b8e247734c"
+
+
+
+# name = "" public
+# _name = "" protected 
+# __name = "" private
+
+
+class User ():
+    def __init__(self,n = "guest"):
+        self.__name = n
+        
+    def printTheName(self):
+        print(self.__name)
+        return self.__name
+
+    def changeName(self,newName):
+        self.__name = newName
+class Email():
+    def generateEmail(self,name):
+        self.__email = f"{name}123@gmail.com"
+        # self.__email = name+"123@gmail.com"
+    def printEmail(self):
+        print(self.__email)
+    
+user1 = User("Ram")
+user1.printTheName()
+user1.__name = "Sam"
+user1.printTheName()
+user1.changeName("Raj")
+user1.printTheName()
+
+class Employee(User,Email):
+    pass
+
+emp1 = Employee()
+emp1.generateEmail(emp1.printTheName())
+emp1.printEmail()
+
+"https://chatgpt.com/share/692451f8-9fa0-800c-8965-1e7611793410"
